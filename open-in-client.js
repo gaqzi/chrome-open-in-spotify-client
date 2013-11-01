@@ -10,11 +10,16 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
       uriPart = details.url.slice(domainEnds).replace('/', ':');
 
   if(uriPart) {
-    // Doesn't seem like any events are raised after the redirect, so
-    // just wait and then close the tab.
-    setTimeout(function() {
-      chrome.tabs.remove(details.tabId);
-    }, 100);
+    // If the current tab url is the same as the one initiating this
+    // request it means this is a newly opened tab, so it is safe to
+    // close the tab after Spotify has been opened.
+    chrome.tabs.get(details.tabId, function(tab) {
+      if(tab.url === details.url) {
+        setTimeout(function() {
+          chrome.tabs.remove(details.tabId);
+        }, 100);
+      }
+    });
 
     return {
       redirectUrl: 'spotify:'+ uriPart

@@ -2,8 +2,9 @@
     "manifest_version": 2,
     "name": "Open in Spotify client",
     "description": "Instead of opening open.spotify.com links in the browser they will always be opened in Spotify",
-    "version": "1.0",
+    "version": "1.1",
     "permissions": [
+        "tabs",
         "webRequest",
         "webRequestBlocking",
         "*://open.spotify.com/",

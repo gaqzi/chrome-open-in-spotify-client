@@ -12,7 +12,7 @@ The way the extension works is:
 3. Replace those with spotify: and 
 4. Replace the remaining slashes (/) with colons (:)
 5. Redirect to that URL
-6. Close the tab that was opening the URL
+6. Close the tab that was opening the URL if it was a newly opened tab
 
 Available in the [Google Chrome web store][store-url]
 
