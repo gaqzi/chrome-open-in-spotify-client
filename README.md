@@ -16,4 +16,8 @@ The way the extension works is:
 
 Available in the [Google Chrome web store][store-url]
 
+# Changes
+## 1.2
+* Opens links to user's playlists properly. Thanks for the bug report Robin H.
+
 [store-url]: https://chrome.google.com/webstore/detail/open-in-spotify-client/okkdbmdhpgmajopdpmflkldkemcldnjd

@@ -7,7 +7,7 @@ var urls = {
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   var domainEnds = details.url.indexOf('/', 8) + 1, // https://.length == 8
-      uriPart = details.url.slice(domainEnds).replace('/', ':');
+      uriPart = details.url.slice(domainEnds).replace(/\//g, ':');
 
   if(uriPart) {
     // If the current tab url is the same as the one initiating this
