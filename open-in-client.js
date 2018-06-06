@@ -26,4 +26,4 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
       redirectUrl: 'spotify:'+ uriPart
     };
   }
-}, urls, ["blocking"]);
+}, urls, ['blocking']);
