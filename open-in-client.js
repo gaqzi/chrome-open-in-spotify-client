@@ -7,9 +7,10 @@ var urls = {
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   var domainEnds = details.url.indexOf('/', 8) + 1, // https://.length == 8
-      uriPart = details.url.slice(domainEnds).replace(/\//g, ':');
+      uriPart = details.url.slice(domainEnds).replace(/\//g, ':'),
+      isEmbedLink = details.url.indexOf('/embed/') != -1;
 
-  if(uriPart) {
+  if(uriPart && !isEmbedLink) {
     // If the current tab url is the same as the one initiating this
     // request it means this is a newly opened tab, so it is safe to
     // close the tab after Spotify has been opened.
