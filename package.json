@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gaqzi/chrome-open-in-spotify-client#readme",
   "devDependencies": {
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "tape": "^5.0.0",
   }
 }
