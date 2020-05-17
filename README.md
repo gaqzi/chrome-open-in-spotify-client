@@ -21,6 +21,9 @@ The way the extension works is:
 Available in the [Google Chrome web store][store-url]
 
 # Changes
+## 1.4.2
+* Remove some missed debug logging, d'oh
+
 ## 1.4.1
 * Purely a technical implementation release, switched from using webpack,
   in the unreleased 1.4, to relying on [native ES6 modules in the extension.][es6-modules-extension]
