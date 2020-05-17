@@ -21,6 +21,12 @@ The way the extension works is:
 Available in the [Google Chrome web store][store-url]
 
 # Changes
+## 1.4.1
+* Purely a technical implementation release, switched from using webpack,
+  in the unreleased 1.4, to relying on [native ES6 modules in the extension.][es6-modules-extension]
+
+[es6-modules-extension]: https://medium.com/front-end-weekly/es6-modules-in-chrome-extensions-an-introduction-313b3fce955b
+
 ## 1.4
 * Don't touch analytics/log links and legacy embed links. 
   Thanks [@claui] for the PR.
