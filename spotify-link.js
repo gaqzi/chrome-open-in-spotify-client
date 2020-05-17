@@ -7,12 +7,12 @@ const spotifyUriStubsToLeaveAlone = [
   '/log/' // Used for analytics
 ]
 // These are domains to register intercepts for
-const domains = [
+export const domains = [
   'open.spotify.com',
   'play.spotify.com'
 ]
 
-function createDesktop (webUri) {
+export function createDesktop (webUri) {
   const domainEnds = webUri.indexOf('/', uriPrefixLength) + 1
   const uriPart = webUri.slice(domainEnds).replace(/\//g, ':')
 
@@ -21,14 +21,10 @@ function createDesktop (webUri) {
 
 // If the URI contains any of the stubs specified in spotifyUriStubsToLeaveAlone
 // These are URLs
-function leaveAlone (webUri) {
+export function leaveAlone (webUri) {
   for (const stub of spotifyUriStubsToLeaveAlone) {
     if (webUri.indexOf(stub) !== -1) return true
   }
 
   return false
 }
-
-exports.createDesktop = createDesktop
-exports.domains = domains
-exports.leaveAlone = leaveAlone

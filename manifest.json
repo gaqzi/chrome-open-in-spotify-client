@@ -11,6 +11,6 @@
         "*://play.spotify.com/"
     ],
     "background": {
-        "scripts": ["open-in-client.js"]
+        "page": "chrome-background.html"
     }
 }

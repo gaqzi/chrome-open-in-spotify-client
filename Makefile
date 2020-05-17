@@ -7,14 +7,12 @@ clean:
 
 package: $(ZIP_FILE)
 
-$(ZIP_FILE): dist/chrome/open-in-client.js dist/chrome/manifest.json
-	zip -j $(ZIP_FILE) dist/chrome/manifest.json dist/chrome/open-in-client.js
+$(ZIP_FILE): dist/chrome/chrome.js dist/chrome/spotify-link.js dist/chrome/manifest.json dist/chrome/chrome-background.html
+	zip -j $(ZIP_FILE) $^
 
-dist/chrome/open-in-client.js: chrome.js spotify-link.js
-	npx webpack --mode=production
-
-dist/chrome/manifest.json: manifest.json
-	cp $< $@
+dist/chrome/%: %
+	@mkdir -p dist/chrome
+	cp $* $@
 
 fmt:
 	npx standard --fix
