@@ -12,7 +12,7 @@ The way the extension works is:
    - `/embed/`: Embedded playlists
    - `/embed?`: Legacy embed playlist format
    - `/log/`: Requests to Spotify's analytics
-3. Remove the FQDN part and the first slash and
+3. Remove the protocol and domain part together with the first slash and
 4. Replace those with `spotify:` and
 5. Replace the remaining slashes (`/`) with colons (`:`) and
 6. Redirect to that URL and
