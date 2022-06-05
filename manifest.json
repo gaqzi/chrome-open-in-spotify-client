@@ -12,5 +12,8 @@
     ],
     "background": {
         "page": "chrome-background.html"
-    }
+    },
+    "icons": [
+        "icon.png"
+    ]
 }

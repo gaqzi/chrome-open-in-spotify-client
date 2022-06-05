@@ -7,7 +7,7 @@ clean:
 
 package: $(ZIP_FILE)
 
-$(ZIP_FILE): dist/chrome/chrome.js dist/chrome/spotify-link.js dist/chrome/manifest.json dist/chrome/chrome-background.html
+$(ZIP_FILE): dist/chrome/chrome.js dist/chrome/spotify-link.js dist/chrome/manifest.json dist/chrome/chrome-background.html dist/chrome/icon.png
 	zip -j $(ZIP_FILE) $^
 
 dist/chrome/%: %
