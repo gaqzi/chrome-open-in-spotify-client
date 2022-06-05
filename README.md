@@ -3,7 +3,10 @@ Open Spotify link in client
 
 This is a small simple extension that tries to open any
 open.spotify.com or play.spotify.com url in the Spotify desktop client
-and then close the newly opened browser window.
+instead of playing it using the Spotify web player. After opening
+the desktop client it tries to close the newly opened browser window.
+
+# How
 
 The way the extension works is:
 
